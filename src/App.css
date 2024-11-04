@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+@media print {
+  /* Ẩn các nút và tiêu đề khi in */
+  .App input,
+  .App h1,
+  .App button {
+    display: none;
+  }
+
+  /* Căn giữa phần badge trên trang in */
+  .badge-preview {
+    margin: 0;
+    padding: 0;
+  }
+}

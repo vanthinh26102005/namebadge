@@ -1,0 +1,63 @@
+/* badge.css */
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 badges per row */
+    gap: 10px;
+    padding: 10px;
+    page-break-after: always; /* Each page breaks for printing */
+  }
+  
+  .badge {
+    position: relative;
+    width: 100%; /* Take full width of grid column */
+    height: 12cm; /* Badge height to fit 4 rows on A4 */
+    border: 1px solid transparent;
+    background: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .badge-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+  }
+  
+  .badge-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .badge-title {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .badge-company {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  @media print {
+    @page {
+      size: A4; /* A4 size for print */
+      margin: 0;
+    }
+  
+    .page {
+      margin: 0;
+      padding: 0;
+      page-break-after: always;
+    }
+  
+    .badge {
+      border: 1px solid black; /* Optional: Visible border for print */
+    }
+  }
+  
